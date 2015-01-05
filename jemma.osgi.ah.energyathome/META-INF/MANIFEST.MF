@@ -33,17 +33,17 @@ Import-Package: org.energy_home.jemma.ah.cluster.ah;version="[3.0.0,3.1.
  osgi.service.event;version="[1.3,2)",org.energy_home.jemma.shal;version
  ="[1.2,2)",org.energy_home.jemma.shal.min;version="[1.2,2)",org.apache.
  http,org.apache.http.util;version="[4.1,5)",org.energy_home.jemma.ah.eb
- rain,org.energy_home.jemma.ah.eh.esp;version="[2.2,3)",org.osgi.framewo
- rk;version="1.3.0",org.energy_home.jemma.ah.hac.lib.ext;version="[3.4.0
- ,3.5.0)",org.osgi.service.cm;version="[1.5,2)",org.energy_home.jemma.ut
- ils.xml.jaxb;version="[1.0.0,1.1.0)",org.osgi.service.device;version="[
- 1.1,2)"
-Include-Resource: OSGI-INF/espweb.xml=OSGI-INF/espweb.xml,OSGI-INF/esp.x
- ml=OSGI-INF/esp.xml,OSGI-INF/espeventsdispatcher.xml=OSGI-INF/espevents
- dispatcher.xml,OSGI-INF/espconsole.xml=OSGI-INF/espconsole.xml,xml/scen
- arios/EnergyAtHome.xml=src/main/resources/xml/scenarios/EnergyAtHome.xm
- l,xml/scenarios/EmptyConfig.xml=src/main/resources/xml/scenarios/EmptyC
- onfig.xml
+ rain,org.energy_home.jemma.ah.eh.esp;version="[2.2,3)",org.osgi.service
+ .cm;version="[1.5,2)",org.energy_home.jemma.ah.hac.lib.ext;version="[3.
+ 4.0,3.5.0)",org.osgi.service.device;version="[1.1,2)",org.osgi.framewor
+ k;version="1.3.0",org.energy_home.jemma.utils.xml.jaxb;version="[1.0.0,
+ 1.1.0)"
+Include-Resource: OSGI-INF/esp.xml=OSGI-INF/esp.xml,OSGI-INF/espconsole.
+ xml=OSGI-INF/espconsole.xml,OSGI-INF/espeventsdispatcher.xml=OSGI-INF/e
+ speventsdispatcher.xml,OSGI-INF/espweb.xml=OSGI-INF/espweb.xml,xml/scen
+ arios/EmptyConfig.xml=src/main/resources/xml/scenarios/EmptyConfig.xml,
+ xml/scenarios/EnergyAtHome.xml=src/main/resources/xml/scenarios/EnergyA
+ tHome.xml
 Private-Package: org.energy_home.jemma.internal.ah.eh.esp,org.energy_hom
  e.jemma.osgi.ah.eh.esp,xml.scenarios
 Require-Bundle: org.apache.httpcomponents.httpclient;bundle-version="4.1
@@ -51,8 +51,3 @@ Require-Bundle: org.apache.httpcomponents.httpclient;bundle-version="4.1
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
 Service-Component: OSGI-INF/*.xml
 Tool: Bnd-2.3.0.201405100607
-Bundle-ClassPath: .,
- stax-api-1.0-2.jar,
- wstx-asl-3.2.3.jar,
- JAXBNamespacePrefixMapper-2.2.4.jar,
- easymock-2.4.jar

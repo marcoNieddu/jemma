@@ -3,7 +3,7 @@ Bundle-Category: Automation@Home Configurator
 Bundle-ManifestVersion: 2
 Bundle-Name: A@H configurator
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Bundle-SymbolicName: jemma.osgi.ah.configurator;singleton:=true
+Bundle-SymbolicName: jemma.osgi.ah.configurator
 Bundle-Vendor: Telecom Italia
 Bundle-Version: 1.0.7
 Created-By: Apache Maven Bundle Plugin
@@ -18,18 +18,18 @@ Import-Package: org.energy_home.jemma.ah.hac;version="[3.0,4)",org.energ
  ,org.energy_home.jemma.ah.hac.lib;version="3.0.1"
 Include-Resource: OSGI-INF/configurator.xml=OSGI-INF/configurator.xml,OS
  GI-INF/configurator_commands.xml=OSGI-INF/configurator_commands.xml,xml
- /scenarios/defaultconfig.xml=src/main/resources/xml/scenarios/defaultco
- nfig.xml,xml/scenarios/EnergyAtHome.xml=src/main/resources/xml/scenario
- s/EnergyAtHome.xml,xml/scenarios/EAHMockup.xml=src/main/resources/xml/s
- cenarios/EAHMockup.xml,xml/scenarios/SmartHome.xml=src/main/resources/x
- ml/scenarios/SmartHome.xml,xml/scenarios/Indesit.xml=src/main/resources
- /xml/scenarios/Indesit.xml,xml/scenarios/E-kitchen.xml=src/main/resourc
- es/xml/scenarios/E-kitchen.xml,xml/scenarios/EmptyConfig.xml=src/main/r
- esources/xml/scenarios/EmptyConfig.xml,xml/scenarios/EspOsgiMockupTest.
- xml=src/main/resources/xml/scenarios/EspOsgiMockupTest.xml,xml/scenario
- s/ConfigAdminTest.xml=src/main/resources/xml/scenarios/ConfigAdminTest.
- xml,xml/scenarios/AqualtisTest.xml=src/main/resources/xml/scenarios/Aqu
- altisTest.xml
+ /scenarios/AqualtisTest.xml=src/main/resources/xml/scenarios/AqualtisTe
+ st.xml,xml/scenarios/ConfigAdminTest.xml=src/main/resources/xml/scenari
+ os/ConfigAdminTest.xml,xml/scenarios/defaultconfig.xml=src/main/resourc
+ es/xml/scenarios/defaultconfig.xml,xml/scenarios/E-kitchen.xml=src/main
+ /resources/xml/scenarios/E-kitchen.xml,xml/scenarios/EAHMockup.xml=src/
+ main/resources/xml/scenarios/EAHMockup.xml,xml/scenarios/EmptyConfig.xm
+ l=src/main/resources/xml/scenarios/EmptyConfig.xml,xml/scenarios/Energy
+ AtHome.xml=src/main/resources/xml/scenarios/EnergyAtHome.xml,xml/scenar
+ ios/EspOsgiMockupTest.xml=src/main/resources/xml/scenarios/EspOsgiMocku
+ pTest.xml,xml/scenarios/Indesit.xml=src/main/resources/xml/scenarios/In
+ desit.xml,xml/scenarios/SmartHome.xml=src/main/resources/xml/scenarios/
+ SmartHome.xml
 Private-Package: org.energy_home.jemma.ah.internal.configurator,xml.scen
  arios
 Provide-Capability: osgi.service;effective:=active;objectClass="org.ecli
@@ -47,5 +47,3 @@ Require-Capability: osgi.service;effective:=active;resolution:=optional;
 Service-Component: OSGI-INF/configurator.xml,OSGI-INF/configurator_comma
  nds.xml
 Tool: Bnd-2.3.0.201405100607
-Bundle-ClassPath: .,
- org.osgi.core-4.0.0.jar

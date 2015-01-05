@@ -4,7 +4,7 @@ Bundle-Category: Automation@Home
 Bundle-ManifestVersion: 2
 Bundle-Name: AH Apache Felix Web Console Plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Bundle-SymbolicName: jemma.osgi.ah.felix.console.web;singleton:=true
+Bundle-SymbolicName: jemma.osgi.ah.felix.console.web
 Bundle-Vendor: Telecom Italia
 Bundle-Version: 1.0.9
 Created-By: Apache Maven Bundle Plugin
@@ -28,5 +28,3 @@ Require-Capability: osgi.service;effective:=active;filter:="(objectClass
  =JavaSE)(version=1.6))"
 Service-Component: OSGI-INF/HacWebCommandProvider.xml
 Tool: Bnd-2.3.0.201405100607
-Bundle-ClassPath: .,
- org.osgi.core-4.0.0.jar

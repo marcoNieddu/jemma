@@ -32,6 +32,7 @@ import org.energy_home.jemma.javagal.json.servlet.nodeServicesServlet;
 import org.energy_home.jemma.javagal.json.servlet.resetServlet;
 import org.energy_home.jemma.javagal.json.servlet.startUpServlet;
 import org.energy_home.jemma.javagal.json.servlet.versionServlet;
+import org.energy_home.jemma.javagal.json.servlet.wakeUpOnLanServlet;
 import org.energy_home.jemma.javagal.json.servlet.wsnNodesServlet;
 import org.energy_home.jemma.zgd.GalExtenderProxyFactory;
 import org.energy_home.jemma.zgd.GatewayInterface;
@@ -119,6 +120,12 @@ public class ServletContainer implements HttpSessionListener{
 			service.registerServlet(prefix + Resources.NWT_ROOT_URI + ResourcePathURIs.INFOBASE, new getInfoBaseAttributesServlet(gatewayInterface), null, null);
 			
 			
+			/*
+			 * Defines InfoBase route "/wakeuponlan"
+			 */
+			service.registerServlet(prefix + "/wakeuponlan", new wakeUpOnLanServlet(), null, null);
+			
+			
 			
 			
 		} catch (ServletException e) {
@@ -177,7 +184,11 @@ public class ServletContainer implements HttpSessionListener{
 		 */
 		service.unregister(prefix + Resources.NWT_ROOT_URI + ResourcePathURIs.INFOBASE);
 		
-		
+		/*
+		 * Defines InfoBase route "/wakeuponlan"
+		 */
+		service.unregister(prefix + "/wakeuponlan");
+	
 		
 	}
 

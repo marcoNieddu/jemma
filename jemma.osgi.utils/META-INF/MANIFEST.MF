@@ -1,10 +1,11 @@
 Manifest-Version: 1.0
 Bundle-Activator: org.energy_home.jemma.osgi.utils.Activator
 Bundle-Category: Automation@Home
+Bundle-ClassPath: .,JAXBNamespacePrefixMapper-2.2.4.jar
 Bundle-ManifestVersion: 2
 Bundle-Name: Osgi Utils
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-SymbolicName: jemma.osgi.utils;singleton:=true
+Bundle-SymbolicName: jemma.osgi.utils
 Bundle-Vendor: Telecom Italia
 Bundle-Version: 1.0.6
 Created-By: Apache Maven Bundle Plugin
@@ -37,11 +38,12 @@ Import-Package: javax.xml.bind,javax.xml.namespace,javax.crypto,javax.cr
  .util;resolution:=optional;version="[4.1,5)",org.energy_home.jemma.util
  s.datetime;resolution:=optional;version="[1.0,2)",org.energy_home.jemma
  .utils.thread;resolution:=optional;version="[1.0,2)",javax.xml.bind.ann
- otation.adapters,javax.xml.bind.helpers,org.apache.commons.codec;versio
- n="[1.3,2)",javax.xml.bind.annotation
-Include-Resource: JAXBNamespacePrefixMapper-2.2.4.jar=/home/einann/.m2/r
- epository/com/googlecode/jaxb-namespaceprefixmapper-interfaces/JAXBName
- spacePrefixMapper/2.2.4/JAXBNamespacePrefixMapper-2.2.4.jar
+ otation.adapters,org.apache.commons.codec;version="[1.3,2)",javax.xml.b
+ ind.helpers,javax.xml.bind.annotation
+Include-Resource: JAXBNamespacePrefixMapper-2.2.4.jar=C:\Documents and S
+ ettings\Marco\.m2\repository\com\googlecode\jaxb-namespaceprefixmapper-
+ interfaces\JAXBNamespacePrefixMapper\2.2.4\JAXBNamespacePrefixMapper-2.
+ 2.4.jar
 Private-Package: JAXBNamespacePrefixMapper-2.2.4.jar,org.energy_home.jem
  ma.internal.utils.datetime,org.energy_home.jemma.internal.utils.thread,
  org.energy_home.jemma.osgi.utils,com.sun.xml.bind.marshaller,com.sun.xm
@@ -50,8 +52,3 @@ Require-Bundle: org.apache.httpcomponents.httpclient;bundle-version="4.1
  .0",org.apache.httpcomponents.httpcore;bundle-version="4.1.0"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
 Tool: Bnd-2.3.0.201405100607
-Bundle-ClassPath: .,
- stax-api-1.0-2.jar,
- wstx-asl-3.2.3.jar,
- JAXBNamespacePrefixMapper-2.2.4.jar,
- org.osgi.core-4.0.0.jar

@@ -12,7 +12,7 @@ var DEFINEPATH = {
 	permitJoinPath : "/json/net/default/allwsnnodes/permitjoin",
 	simpleDescriptorPath : "/json/net/default/wsnnodes/services",
 	attributeInfoPath : "/json/net/default/ib",
-	
+	wakeup : "/json/wakeuponlan",
 }
 
 var DEFINEURL = {

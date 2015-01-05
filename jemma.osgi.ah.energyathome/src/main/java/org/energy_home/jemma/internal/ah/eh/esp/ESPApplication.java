@@ -559,7 +559,7 @@ public class ESPApplication extends HttpServlet implements IApplicationService, 
 			LOG.debug("ESPService - getEnergyConsumption returned: " + result);
 			return result;
 		} catch (Exception e) {
-			mapESPException("ESPService - getEnergyConsumption failed while getting data from hap service", e);
+			mapESPException("ESPService - getEnergyConsumption failed while getting data from hap service for applianceid: " + applianceId, e);
 			return null;
 		}
 	}
@@ -576,7 +576,7 @@ public class ESPApplication extends HttpServlet implements IApplicationService, 
 			LOG.debug("ESPService - getEnergyConsumption returned: " + result);
 			return result;
 		} catch (Exception e) {
-			mapESPException("ESPService - getGeneratedEnergy failed while getting data from hap service", e);
+			mapESPException("ESPService - getGeneratedEnergy failed while getting data from hap service for applianceid: " + applianceId, e);
 			return null;
 		}
 	}
@@ -593,7 +593,7 @@ public class ESPApplication extends HttpServlet implements IApplicationService, 
 			LOG.debug("ESPService - getEnergyConsumption returned: " + result);
 			return result;
 		} catch (Exception e) {
-			mapESPException("ESPService - getGeneratedEnergy failed while getting data from hap service", e);
+			mapESPException("ESPService - getGeneratedEnergy failed while getting data from hap service for applianceid: " + applianceId, e);
 			return null;
 		}
 	}
@@ -618,7 +618,7 @@ public class ESPApplication extends HttpServlet implements IApplicationService, 
 			LOG.debug("ESPService - getEnergyCost hap service returned: " + result);
 			return result;
 		} catch (Exception e) {
-			mapESPException("ESPService - getEnergyCost failed while getting data from hap service", e);
+			mapESPException("ESPService - getEnergyCost failed while getting data from hap service for applianceid: " + applianceId, e);
 			return null;
 		}
 	}
@@ -643,7 +643,7 @@ public class ESPApplication extends HttpServlet implements IApplicationService, 
 			LOG.debug("ESPService - getEnergyConsumptionForecast returned: " + result);
 			return result;
 		} catch (Exception e) {
-			mapESPException("ESPService - Problem while getting energy consumption data from hap service", e);
+			mapESPException("ESPService - Problem while getting energy consumption data from hap service for applianceid: " + applianceId, e);
 			return null;
 		}
 	}
@@ -656,7 +656,7 @@ public class ESPApplication extends HttpServlet implements IApplicationService, 
 			LOG.debug("ESPService - getEnergyCostForecast returned: " + result);
 			return result;
 		} catch (Exception e) {
-			mapESPException("ESPService - Problem while getting energy consumption data from hap service", e);
+			mapESPException("ESPService - Problem while getting energy consumption data from hap service for applianceid: " + applianceId, e);
 			return null;
 		}
 	}
@@ -669,7 +669,7 @@ public class ESPApplication extends HttpServlet implements IApplicationService, 
 			LOG.debug("ESPService - getWeekDayEnergyConsumpionAverage returned: " + result);
 			return result;
 		} catch (Exception e) {
-			mapESPException("ESPService - Problem while getting energy consumption data from hap service", e);
+			mapESPException("ESPService - Problem while getting energy consumption data from hap service for applianceid: " + applianceApplianceId, e);
 			return null;
 		}
 	}
@@ -682,7 +682,7 @@ public class ESPApplication extends HttpServlet implements IApplicationService, 
 			LOG.debug("ESPService - getWeekDayEnergyCostAverage returned: " + result);
 			return result;
 		} catch (Exception e) {
-			mapESPException("ESPService - Problem while getting energy consumption data from hap service", e);
+			mapESPException("ESPService - Problem while getting energy consumption data from hap service for applianceid: " + applianceId, e);
 			return null;
 		}
 	}

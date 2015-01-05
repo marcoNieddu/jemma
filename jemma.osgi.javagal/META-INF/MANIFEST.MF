@@ -31,5 +31,3 @@ Private-Package: config.properties,mapPanId.properties,org.energy_home.j
  l.layers.presentation
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
 Tool: Bnd-2.3.0.201405100607
-Bundle-ClassPath: .,
- org.osgi.core-4.0.0.jar

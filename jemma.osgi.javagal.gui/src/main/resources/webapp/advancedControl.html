@@ -9,6 +9,23 @@
 			}
 		}
 		
+		
+		function wakeupOnLanFunc()
+		{
+		$
+					.ajax(
+							{
+								url : DEFINEPATH.wakeup
+										,
+								type : 'GET'
+							})
+					.done(
+							function(data) {
+								$("#wakeupOnLanLog").val(data);
+							});
+		}
+		
+		
 		function getChannelAndUpdateGui() {
 			$
 					.ajax({
@@ -108,8 +125,15 @@
 									null);
 							myNMMenu.newButton('resetPhilipsHue', null,
 									null);
+									
 							myNMMenu.newButton('stopResetPhilipsHue', null,
 									null);
+							
+							
+							myNMMenu.newButton('wakeupOnLan', null,
+									null);
+							
+							myNMMenu.new
 							var timeout = '00002710';
 							$
 									.ajax(
@@ -307,6 +331,11 @@
 								stopResetPhilips();
 							});
 							
+							$('#wakeupOnLan').click(function(evt) {
+								wakeupOnLanFunc();
+							});
+							
+							
 							
 							updateCurrentChannel();
 						});
@@ -408,7 +437,22 @@
 						</span>
 					</div>
 					
+					
+					
 				</tr>
+				<td align="center">
+				<br />
+					<br />
+					
+					<input type="button" value="WAKEUP REVO PC"
+						id="wakeupOnLan" class="tnHeaderHome2" title="WakeUpOnLan" />
+				<br />
+					<input type="text" value="" size="25"
+						id="wakeupOnLanLog" class="tnHeaderHome2" title="WakeUpOnLanLog" />
+					
+				</td>
+				<tr>
+				
 			</table>
 		</form>
 	</div>

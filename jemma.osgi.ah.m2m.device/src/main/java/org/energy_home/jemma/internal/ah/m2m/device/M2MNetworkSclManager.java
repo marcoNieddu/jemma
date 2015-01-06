@@ -240,7 +240,7 @@ public class M2MNetworkSclManager {
 			return (ContentInstanceItems) jaxbConverterFactory.getObject(response.getEntity());
 		} catch (Exception e) {
 			M2MUtils.mapDeviceException(LOG, e,
-					"Error while getting content instance items for container " + containerId.getUrl() + " - "
+					"Error while getting content instance items for container "  + containerId.getUrl() + " - HOST: "+ uri.getHost() + " - PORT: " + uri.getPort() + " - - USERINFO: " + uri.getUserInfo() +" - URI: " + uri.getPath() +" - Error: " + e.getMessage() + " - "
 							+ strStartInstanceId + ", " + strEndInstanceId);
 			return null;
 		} finally {

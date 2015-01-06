@@ -32,9 +32,9 @@ Import-Package: org.energy_home.jemma.utils.encrypt;version="[1.0.0,1.1.
  onal,org.energy_home.jemma.ah.m2m.device;resolution:=optional;version="
  [1.3,2)",org.energy_home.jemma.m2m;resolution:=optional;version="[1.3,2
  )",org.energy_home.jemma.m2m.connection;resolution:=optional;version="[
- 1.2,2)",org.apache.commons.codec;version="[1.3,2)",javax.xml.bind.helpe
- rs,org.energy_home.jemma.utils.datetime;version="1.0.1",javax.xml.bind.
- annotation.adapters,javax.xml.namespace
+ 1.2,2)",javax.xml.bind.helpers,javax.xml.bind.annotation.adapters,org.e
+ nergy_home.jemma.utils.datetime;version="1.0.1",org.apache.commons.code
+ c;version="[1.3,2)",javax.xml.namespace
 Include-Resource: JAXBNamespacePrefixMapper-2.2.4.jar=C:\Documents and S
  ettings\Marco\.m2\repository\com\googlecode\jaxb-namespaceprefixmapper-
  interfaces\JAXBNamespacePrefixMapper\2.2.4\JAXBNamespacePrefixMapper-2.

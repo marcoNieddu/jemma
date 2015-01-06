@@ -366,8 +366,8 @@ CostiConsumi.DatiElettrodomesticiCB = function(result, err) {
 				}
 				CostiConsumi.SmartInfo = elettrodom["map"];
 				Main.appIdSmartInfo = elettrodom["map"][InterfaceEnergyHome.ATTR_APP_PID];
-				//if (Main.env == 0) console.log('COSTICONSUMI1', 'SmartInfo - ');
-				//if (Main.env == 0) console.log(CostiConsumi.SmartInfo);
+				if (InterfaceEnergyHome.PID_TOTALE == null)
+					InterfaceEnergyHome.PID_TOTALE = Main.appIdSmartInfo;
 			} else {
 				if (elettrodom["map"][InterfaceEnergyHome.ATTR_APP_VALUE] == undefined || elettrodom["map"][InterfaceEnergyHome.ATTR_APP_VALUE].list[0] == undefined){
 					elettrodom["map"][InterfaceEnergyHome.ATTR_APP_VALUE] = {list: new Array()};

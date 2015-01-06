@@ -208,7 +208,7 @@ public class interpanServlet extends HttpServlet {
 
 				m.setDstAddressMode(2);
 				Address broadcast = new Address();
-				broadcast.setNetworkAddress(65535);
+				broadcast.setNetworkAddress(0xFFFF);
 				m.setDestinationAddress(broadcast);
 				m.setDestPANID(broadcast.getNetworkAddress());
 

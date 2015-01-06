@@ -602,7 +602,7 @@ public class HapServiceManager implements Runnable, M2MDeviceListener {
 		try {
 			return m2mNetworkScl.getSclContentInstance(((AHM2MContainerAddress)containerId).getM2MContainerAdress(), instanceId);
 		} catch (M2MServiceException e) {
-			throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS);
+			throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS + " Error:" + e.getMessage());
 		}
 	}
 
@@ -615,7 +615,7 @@ public class HapServiceManager implements Runnable, M2MDeviceListener {
 		try {
 			return m2mNetworkScl.getSclContentInstanceItemsList(((AHM2MContainerAddress)containerId).getM2MContainerAdress(), instanceId);
 		} catch (M2MServiceException e) {
-			throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS);
+			throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS + " Error:" + e.getMessage());
 		}
 	}
 
@@ -628,7 +628,7 @@ public class HapServiceManager implements Runnable, M2MDeviceListener {
 		try {
 			return m2mNetworkScl.getSclContentInstanceItems(((AHM2MContainerAddress)containerId).getM2MContainerAdress(), startInstanceId, endInstanceId);
 		} catch (M2MServiceException e) {
-			throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS);
+			throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS + " Error:" + e.getMessage());
 		}
 	}
 
@@ -641,7 +641,7 @@ public class HapServiceManager implements Runnable, M2MDeviceListener {
 		try {
 			return m2mNetworkScl.getSclContentInstanceItemsList(((AHM2MContainerAddress)containerIdFilter).getM2MContainerAdress(), startInstanceId, endInstanceId);
 		} catch (M2MServiceException e) {
-			throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS);
+			throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS + " Error:" + e.getMessage());
 		}
 	}
 
@@ -712,7 +712,7 @@ public class HapServiceManager implements Runnable, M2MDeviceListener {
 			try {
 				contentInstance = m2mNetworkScl.createSclContentInstance(((AHM2MContainerAddress)containerId).getM2MContainerAdress(), contentInstance);
 			} catch (M2MServiceException e) {
-				throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS);
+				throw new M2MHapException(HAP_SERVER_COMMUNICATION_PROBLEMS + " Error:" + e.getMessage());
 			}
 		}
 		synchronized (cisItems) {

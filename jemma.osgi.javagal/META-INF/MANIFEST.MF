@@ -27,7 +27,7 @@ Private-Package: config.properties,mapPanId.properties,org.energy_home.j
  ementations.IDataLayerImplementation,org.energy_home.jemma.javagal.laye
  rs.data.implementations,org.energy_home.jemma.javagal.layers.data.imple
  mentations.Utils,org.energy_home.jemma.javagal.layers.data.interfaces,o
- rg.energy_home.jemma.javagal.layers.object,org.energy_home.jemma.javaga
- l.layers.presentation
+ rg.energy_home.jemma.javagal.layers.data,org.energy_home.jemma.javagal.
+ layers.object,org.energy_home.jemma.javagal.layers.presentation
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
 Tool: Bnd-2.3.0.201405100607

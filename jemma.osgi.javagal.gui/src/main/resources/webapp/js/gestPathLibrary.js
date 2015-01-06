@@ -12,6 +12,8 @@ var DEFINEPATH = {
 	permitJoinPath : "/json/net/default/allwsnnodes/permitjoin",
 	simpleDescriptorPath : "/json/net/default/wsnnodes/services",
 	attributeInfoPath : "/json/net/default/ib",
+	sendinterPan : "/json/net/default/interpan",
+	
 	wakeup : "/json/wakeuponlan",
 }
 

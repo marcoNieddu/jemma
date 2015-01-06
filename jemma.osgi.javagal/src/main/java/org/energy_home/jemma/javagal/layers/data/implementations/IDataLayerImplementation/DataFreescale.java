@@ -1705,6 +1705,7 @@ public class DataFreescale implements IDataLayer {
 	 */
 	private void interpanDataConfirm(ByteArrayObject message) {
 		LOG.debug("Extracted INTERPAN-Data.Confirm: {}", message.ToHexString());
+		/*
 		synchronized (getListLocker()) {
 			for (ParserLocker pl : getListLocker()) {
 
@@ -1721,6 +1722,7 @@ public class DataFreescale implements IDataLayer {
 				}
 			}
 		}
+		*/
 	}
 
 	/**
@@ -3961,8 +3963,8 @@ public class DataFreescale implements IDataLayer {
 	public Status sendInterPANMessaSync(long timeout, InterPANMessage message) throws Exception {
 		LOG.debug("Data_FreeScale.send_InterPAN");
 
-		ParserLocker lock = new ParserLocker();
-		lock.setType(TypeMessage.INTERPAN);
+		//ParserLocker lock = new ParserLocker();
+		//lock.setType(TypeMessage.INTERPAN);
 		/* DestAddress + DestEndPoint + SourceEndPoint */
 		BigInteger _DSTAdd = null;
 		if ((message.getDstAddressMode() == GatewayConstants.EXTENDED_ADDRESS_MODE))
@@ -3974,9 +3976,10 @@ public class DataFreescale implements IDataLayer {
 
 		Status status = new Status();
 
-		getListLocker().add(lock);
+		//getListLocker().add(lock);
 
 		SendRs232Data(makeByteArrayFromInterPANMessage(message));
+		/*
 		if (lock.getStatus().getCode() == ParserLocker.INVALID_ID)
 			lock.getObjectLocker().poll(timeout, TimeUnit.MILLISECONDS);
 		status = lock.getStatus();
@@ -3997,7 +4000,9 @@ public class DataFreescale implements IDataLayer {
 
 			}
 			return status;
-		}
+		}*/
+		status.setCode((short) GatewayConstants.SUCCESS);
+		return status;
 	}
 
 	

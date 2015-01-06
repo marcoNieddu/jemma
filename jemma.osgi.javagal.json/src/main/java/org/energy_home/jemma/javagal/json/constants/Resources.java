@@ -43,6 +43,11 @@ public class Resources {
 	public final static String URI_PARAM_CACHE = "cache";
 	public final static String URI_ID = "/{id}";
 	public final static String URI_ADDR = "addr";
+	public final static String URI_PANID = "panid";
+	public final static String ASDU = "asdu";
+	
+	
+	
 	public final static String URI_ENDPOINT = "/{ep}";
 	public final static String URI_ATTR = "{attr}";
 	public final static String URI_SERVICE = "/{service}";

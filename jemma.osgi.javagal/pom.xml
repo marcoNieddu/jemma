@@ -58,7 +58,7 @@
 							org.apache.commons.lang3;version="3.3.2",
 							jssc;resolution:=optional,
 							org.slf4j;version="[1.6,2)",
-							org.osgi.framework,
+							org.osgi.framework;version="[1.5,2)",
 							org.osgi.util.tracker;version="1.4.2",*
 						</Import-Package>
 						<Export-Package>org.energy_home.jemma.zgd;version="1.4.1",

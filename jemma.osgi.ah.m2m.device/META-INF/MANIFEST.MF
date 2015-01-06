@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-Activator: org.energy_home.jemma.osgi.ah.m2m.device.M2MDeviceActi
  vator
 Bundle-Category: Automation@Home
+Bundle-ClassPath: .,JAXBNamespacePrefixMapper-2.2.4.jar
 Bundle-ManifestVersion: 2
 Bundle-Name: M2M Device
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
@@ -31,19 +32,20 @@ Import-Package: org.energy_home.jemma.utils.encrypt;version="[1.0.0,1.1.
  onal,org.energy_home.jemma.ah.m2m.device;resolution:=optional;version="
  [1.3,2)",org.energy_home.jemma.m2m;resolution:=optional;version="[1.3,2
  )",org.energy_home.jemma.m2m.connection;resolution:=optional;version="[
- 1.2,2)",javax.xml.bind.helpers,javax.xml.bind.annotation.adapters,org.e
- nergy_home.jemma.utils.datetime;version="1.0.1",javax.xml.namespace,org
- .apache.commons.codec;version="[1.3,2)"
-Include-Resource: JAXBNamespacePrefixMapper-2.2.4.jar=/home/einann/.m2/r
- epository/com/googlecode/jaxb-namespaceprefixmapper-interfaces/JAXBName
- spacePrefixMapper/2.2.4/JAXBNamespacePrefixMapper-2.2.4.jar,schemas/m2m
- _connection.xsd=src/main/resources/schemas/m2m_connection.xsd,schemas/j
- axb_m2m_bindings.xml=src/main/resources/schemas/jaxb_m2m_bindings.xml,s
- chemas/ah.xsd=src/main/resources/schemas/ah.xsd,schemas/jaxb_m2m_connec
- tion_bindings.xml=src/main/resources/schemas/jaxb_m2m_connection_bindin
- gs.xml,schemas/m2m.xsd=src/main/resources/schemas/m2m.xsd,.m2m_schema_x
- jc_flag=src/main/resources/.m2m_schema_xjc_flag,.m2m_connection_schema_
- xjc_flag=src/main/resources/.m2m_connection_schema_xjc_flag
+ 1.2,2)",org.apache.commons.codec;version="[1.3,2)",javax.xml.bind.helpe
+ rs,org.energy_home.jemma.utils.datetime;version="1.0.1",javax.xml.bind.
+ annotation.adapters,javax.xml.namespace
+Include-Resource: JAXBNamespacePrefixMapper-2.2.4.jar=C:\Documents and S
+ ettings\Marco\.m2\repository\com\googlecode\jaxb-namespaceprefixmapper-
+ interfaces\JAXBNamespacePrefixMapper\2.2.4\JAXBNamespacePrefixMapper-2.
+ 2.4.jar,.m2m_connection_schema_xjc_flag=src/main/resources/.m2m_connect
+ ion_schema_xjc_flag,.m2m_schema_xjc_flag=src/main/resources/.m2m_schema
+ _xjc_flag,schemas/ah.xsd=src/main/resources/schemas/ah.xsd,schemas/jaxb
+ _m2m_bindings.xml=src/main/resources/schemas/jaxb_m2m_bindings.xml,sche
+ mas/jaxb_m2m_connection_bindings.xml=src/main/resources/schemas/jaxb_m2
+ m_connection_bindings.xml,schemas/m2m.xsd=src/main/resources/schemas/m2
+ m.xsd,schemas/m2m_connection.xsd=src/main/resources/schemas/m2m_connect
+ ion.xsd
 Private-Package: .m2m_connection_schema_xjc_flag,.m2m_schema_xjc_flag,JA
  XBNamespacePrefixMapper-2.2.4.jar,org.energy_home.jemma.internal.ah.m2m
  .device,org.energy_home.jemma.osgi.ah.m2m.device,schemas,com.sun.xml.bi
@@ -52,8 +54,3 @@ Require-Bundle: org.apache.httpcomponents.httpclient;bundle-version="4.1
  .0",org.apache.httpcomponents.httpcore;bundle-version="4.1.0"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
 Tool: Bnd-2.3.0.201405100607
-Bundle-ClassPath: .,
- stax-api-1.0-2.jar,
- wstx-asl-3.2.3.jar,
- JAXBNamespacePrefixMapper-2.2.4.jar,
- org.osgi.core-4.0.0.jar

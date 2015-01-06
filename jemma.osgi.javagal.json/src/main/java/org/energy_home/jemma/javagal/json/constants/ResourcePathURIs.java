@@ -17,6 +17,8 @@ package org.energy_home.jemma.javagal.json.constants;
 public interface ResourcePathURIs {
 	public static final String VERSION = "/version";
 	public static final String INFOBASE = "/ib";
+	public static final String INTERPAN = "/interpan";
+	
 	public static final String REQUESTS = "/requests/";
 	public static final String NETWORKS = "/networks";
 	public static final String RESET = "/reset";

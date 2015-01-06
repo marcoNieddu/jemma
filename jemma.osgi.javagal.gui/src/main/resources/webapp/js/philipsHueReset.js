@@ -97,7 +97,7 @@ function resetPhilipsProcedure()
 										console.log("GAL_PANID:"+GAL_PANID);
 										that.dequeue();
 									} else {
-										log.error("Error getting PAN ID");
+										alert("Error getting PAN ID");
 			
 									}
 								});
@@ -131,7 +131,7 @@ function resetPhilipsProcedure()
 								console.log("GAL_IEEE:"+dataBig.detail.value)
 								that.dequeue();
 							} else {
-								log.error("Error getting PAN ID");
+								alert("Error getting PAN ID");
 	
 							}
 						});
@@ -163,35 +163,28 @@ function resetPhilipsProcedure()
 	    this.queue(function() {
 	    	setTimeout(function()
 	    	{
-		    	$.ajax(
-		    			{
-						    contentType: "text/xml",
-							url : DEFINEURL.interpanUrl,
-							method: "POST",
-							data: '<?xml version="1.0" encoding="utf-8"?> \
-						        <tns:InterPANMessage xmlns:gal="http://www.zigbee.org/GWGSchema" xmlns:tns="http://www.zigbee.org/GWGRESTSchema">\
-						        <gal:SrcAddressMode>3</gal:SrcAddressMode>\
-						        <gal:SrcAddress>\
-						        <gal:IeeeAddress>'+GAL_IEEE+'</gal:IeeeAddress>\
-						        </gal:SrcAddress>\
-						        <gal:SrcPANID>'+GAL_PANID+'</gal:SrcPANID>\
-						        <gal:DstAddressMode>2</gal:DstAddressMode>\
-						        <gal:DestinationAddress>\
-						        <gal:NetworkAddress>65535</gal:NetworkAddress>\
-						        </gal:DestinationAddress>\
-						        <gal:DestPANID>65535</gal:DestPANID>\
-						        <gal:ProfileID>49246</gal:ProfileID>\
-						        <gal:ClusterID>4096</gal:ClusterID>\
-						        <gal:ASDULength>'+asduLength+'</gal:ASDULength>\
-						        <gal:ASDU>'+asdu+'</gal:ASDU>\
-						        </tns:InterPANMessage>',
-							success: function(data) {
+	    		
+	    		
+	    		$.ajax(
+						{
+							url : DEFINEPATH.sendinterPan
+									+ "?timeout=00000014&addr=" + GAL_IEEE + "&panid=" + GAL_PANID + "&asdu=" + asdu,
+							type : 'GET'
+						})
+				.done(
+						function(data) {
+							var dataBig = json_parse(data);
+							
+							if (dataBig.status.code == 0) {
 								console.log(data);
 								that.dequeue();
+							} else {
+								alert("Error sending InterPan Message");
 	
-							}	
-		    			}
-		    	);
+							}
+						});
+		    			
+		    	
 	    	},afterMsecs);
 	    });
 	    // action the next method in the chain

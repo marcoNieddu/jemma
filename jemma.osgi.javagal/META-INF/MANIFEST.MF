@@ -14,7 +14,7 @@ Export-Package: org.energy_home.jemma.zgd;version="1.4.1";uses:="org.ene
  ion.adapters"
 Import-Package: gnu.io;version="1.0.0";resolution:=optional,org.apache.c
  ommons.lang3;version="3.3.2",jssc;resolution:=optional;version="[2.8,3)
- ",org.slf4j;version="[1.6,2)",org.osgi.framework;version="[1.8,2)",java
+ ",org.slf4j;version="[1.6,2)",org.osgi.framework;version="[1.5,2)",java
  x.xml.bind,javax.xml.bind.annotation,javax.xml.bind.annotation.adapters
  ,javax.xml.namespace;version="[1.3,2)",org.energy_home.jemma.zgd.jaxb;v
  ersion="[1.0,2)",org.osgi.util.tracker;version="1.4.2"

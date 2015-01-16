@@ -74,8 +74,8 @@ Import-Package: edu.emory.mathcs.backport.java.util.concurrent,org.energ
  on="[3.1,4)",org.energy_home.jemma.ah.cluster.zigbee.security;version="
  [3.0,4)",org.energy_home.jemma.ah.cluster.zigbee.wulian;version="[1.0,2
  )",org.energy_home.jemma.ah.cluster.zigbee.zll;version="[1.0,2)",org.en
- ergy_home.jemma.ah.zigbee;version="[3.0,4)",org.osgi.service.prefs;vers
- ion="1.1.0",org.osgi.service.device;version="[1.1,2)",edu.emory.mathcs.
+ ergy_home.jemma.ah.zigbee;version="[3.0,4)",org.osgi.service.device;ver
+ sion="[1.1,2)",org.osgi.service.prefs;version="1.1.0",edu.emory.mathcs.
  backport.java.util.concurrent.locks
 Include-Resource: OSGI-INF/l10n/bundle.properties=OSGI-INF/l10n/bundle.p
  roperties,OSGI-INF/l10n/bundle_it.properties=OSGI-INF/l10n/bundle_it.pr

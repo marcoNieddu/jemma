@@ -9,10 +9,10 @@ Bundle-Vendor: Telecom Italia
 Bundle-Version: 3.3.0
 Created-By: Apache Maven Bundle Plugin
 Export-Package: org.energy_home.jemma.ah.app;version="3.3.0"
-Implementation-Version: 341e099af2fb602d58e55b1dfe4268c25ca031e5
+Implementation-Version: 8d4221f6c0c02c2997b885d33527b89da48a6c3a
 Import-Package: org.osgi.framework;version="1.3.0"
 Private-Package: org.energy_home.jemma.ah.app.impl
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
 Tool: Bnd-2.3.0.201405100607
 X-Git-Branch: master
-X-Git-Commits-Count: 1000
+X-Git-Commits-Count: 1004
